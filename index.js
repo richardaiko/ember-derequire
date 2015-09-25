@@ -25,5 +25,11 @@ module.exports = {
     }
 
     return tree;
+  },
+  
+  contentFor:function (type) {
+    if(type === 'app-boot'){
+      return 'var define = define; var require = require;'
+    }
   }
 };
