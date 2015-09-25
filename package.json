@@ -38,9 +38,13 @@
     "ember-try": "0.0.6"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "derequire",
+    "amd",
+    "ember-amd"
   ],
   "dependencies": {
+    "broccoli-derequire": "^0.1.0",
     "ember-cli-babel": "^5.0.0"
   },
   "ember-addon": {
