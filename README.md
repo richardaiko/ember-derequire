@@ -1,6 +1,6 @@
 # Ember-derequire
 
-[Ember CLI](http://www.ember-cli.com/) addon to replace all occurances of a given token with another (require with _dereq_ by default). This is just a thin wrapper around [broccoli-derequire](https://github.com/rwjblue/broccoli-derequire).
+[Ember CLI](http://www.ember-cli.com/) addon to replace all occurances of a given token with another (require with eriuqer and define with enifed by default). [broccoli-derequire](https://github.com/rwjblue/broccoli-derequire).
 
 ## Installation
 
