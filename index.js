@@ -20,19 +20,19 @@ module.exports = {
   },
 
   postprocessTree: function(type, tree) {
-    if (type === 'all' && this.isEnabled()) {
+    if (type === 'all' && this._isEnabled()) {
       tree = derequire(tree, this.options);
     }
     return tree;
   },
   
   contentFor:function (type) {
-    if(type === 'app-boot' && this.isEnabled()){
+    if(type === 'app-boot' && this._isEnabled()){
       return 'var define = define; var require = require;'
     }
   },
   
-  isEnabled:function() {
+  _isEnabled:function() {
     return this.options && this.options.enabled;
   }
 };
