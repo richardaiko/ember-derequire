@@ -1,6 +1,6 @@
 {
   "name": "ember-derequire",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Ember-cli addon to replace all occurances of a given token with another (require with eriuqer and define with enifed by default).",
   "directories": {
     "doc": "doc",
@@ -48,6 +48,9 @@
     "ember-cli-babel": "^5.0.0"
   },
   "ember-addon": {
-    "configPath": "tests/dummy/config"
+    "configPath": "tests/dummy/config",
+    "before": [
+      "ember-cli-sri"
+    ]
   }
 }
