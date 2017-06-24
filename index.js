@@ -8,31 +8,31 @@ module.exports = {
 
   included: function(app) {
     this._super.included.apply(this, arguments);
-    this.options = app.options.derequire || {};
+    this.hostBuildOptions = app.options.derequire || {};
 
     var defaultOptions = {enabled: this.app.env !== 'test'};
-    
+
     for (var option in defaultOptions) {
-      if (!this.options.hasOwnProperty(option)) {
-        this.options[option] = defaultOptions[option];
+      if (!this.hostBuildOptions.hasOwnProperty(option)) {
+        this.hostBuildOptions[option] = defaultOptions[option];
       }
     }
   },
 
   postprocessTree: function(type, tree) {
     if (type === 'all' && this._isEnabled()) {
-      tree = derequire(tree, this.options);
+      tree = derequire(tree, this.hostBuildOptions);
     }
     return tree;
   },
-  
+
   contentFor:function (type) {
     if(type === 'app-boot' && this._isEnabled()){
       return 'var define = define; var require = require;'
     }
   },
-  
+
   _isEnabled:function() {
-    return this.options && this.options.enabled;
+    return this.hostBuildOptions && this.hostBuildOptions.enabled;
   }
 };
