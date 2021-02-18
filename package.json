@@ -67,6 +67,7 @@
     "ember-amd"
   ],
   "dependencies": {
+    "broccoli-debug": "^0.6.5",
     "broccoli-derequire": "^1.0.0",
     "ember-cli-babel": "^7.23.1",
     "ember-cli-htmlbars": "^5.3.2"
