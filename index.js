@@ -4,7 +4,7 @@
 var derequire = require('broccoli-derequire');
 
 module.exports = {
-  name: 'ember-derequire',
+  name: require('./package').name,
 
   included: function(app) {
     this._super.included.apply(this, arguments);
