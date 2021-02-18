@@ -4,7 +4,12 @@ const EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 
 module.exports = function (defaults) {
   let app = new EmberAddon(defaults, {
-    // Add options here
+    autoImport: {
+      webpack: {
+        // this is needed to prevent ember-auto-import to use `eval()`, which we cannot parse to rename define/require inside.
+        devtool: 'source-map',
+      },
+    },
   });
 
   /*
